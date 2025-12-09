@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+
+    <!-- Tailwind + DaisyUI -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet">
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Lucide -->
+    <script src="https://unpkg.com/lucide@0.474.0/dist/umd/lucide.js"></script>
+
+    <style>
+        h1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar bg-base-100 shadow-sm py-2 sticky top-0 z-50 backdrop-blur">
+        <div class="flex-1">
+            <a class="btn btn-ghost text-2xl font-semibold">Portofolio</a>
+        </div>
+
+        <div class="flex-none flex items-center gap-4">
+            <ul id="navbar" class="menu menu-horizontal px-1 text-lg font-medium">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skill">Skill</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+
+            <!-- 🌙☀️ Theme Toggle (fixed) -->
+            <label class="swap swap-rotate" aria-label="Toggle theme">
+                <input type="checkbox" id="themeToggle" />
+
+                <!-- moon icon: tampil ketika checked (dark) -->
+                <svg class="swap-on fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M21.64 13a1 1 0 0 0-1.05-.14 7 7 0 0 1-9.19-9.19A1 1 0 0 0 10 2.36 9 9 0 1 0 22 14a1 1 0 0 0-.36-1z" />
+                </svg>
+
+                <!-- sun icon: tampil ketika unchecked (light) -->
+                <svg class="swap-off fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M5.64 17l-.71.71a1 1 0 1 0 1.41 1.41l.71-.71a1 1 0 0 0-1.41-1.41zM1 13h2a1 1 0 0 0 0-2H1a1 1 0 0 0 0 2zm10 9a1 1 0 0 0 1-1v-2a1 1 0 0 0-2 0v2a1 1 0 0 0 1 1zm9-10a1 1 0 0 0 0-2h-2a1 1 0 0 0 0 2zM5.64 7.05a1 1 0 0 0 1.41-1.41l-.71-.71A1 1 0 1 0 4.93 6.34zm12.02 9.95a1 1 0 1 0 1.41-1.41l-.71-.71a1 1 0 1 0-1.41 1.41zM12 7a5 5 0 1 1-5 5 5 5 0 0 1 5-5z" />
+                </svg>
+            </label>
+
+        </div>
+    </div>
+    </div>
+    <div id="home" class="hero bg-base-200 py-20">
+        <div class="hero-content flex-col lg:flex-row-reverse gap-16 max-w-6xl mx-auto">
+            <img src="Asset/Image/Untitled design (1).png" class="max-w-sm rounded-lg shadow-2xl w-90px h-90px" />
+            <div>
+                <h1 class="text-2xl">Hello, I'm</h1>
+                <h1 class="text-4xl font-bold">Arfa Ghazi Amr Arumi,</h1>
+                <h1 class="text-3xl font-bold">
+                    I'm a <span id="role" class="text-blue-500"></span>
+                </h1>
+                <p class="py-6 text-2x leading-relaxed max-w-xl">
+                    I am a student with a keen interest in technology, particularly in the field of web development.
+                    I am currently enrolled in a vocational school that supports my interest in IT. I am currently
+                    focusing on honing my coding skills so that I can become a web developer.
+                </p>
+
+                <button class="btn btn-primary" href="contact.html">Hire Me</button>
+            </div>
+        </div>
+    </div>
+    <div id="skill" class="py-24 bg-base-100">
+        <div class="max-w-6xl mx-auto px-6">
+
+            <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">
+                Skills
+            </h2>
+
+            <!-- GRID SKILL -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+                <!-- HTML -->
+                <div class="bg-base-200 p-6 rounded-xl shadow-md flex flex-col items-center hover:scale-105 transition"
+                    data-aos="zoom-in">
+                    <i data-lucide="code" class="w-10 h-10 mb-3"></i>
+                    <p class="text-lg font-medium">HTML</p>
+                </div>
+
+                <!-- CSS -->
+                <div class="bg-base-200 p-6 rounded-xl shadow-md flex flex-col items-center hover:scale-105 transition"
+                    data-aos="zoom-in" data-aos-delay="100">
+                    <i data-lucide="palette" class="w-10 h-10 mb-3"></i>
+                    <p class="text-lg font-medium">CSS</p>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="bg-base-200 p-6 rounded-xl shadow-md flex flex-col items-center hover:scale-105 transition"
+                    data-aos="zoom-in" data-aos-delay="200">
+                    <i data-lucide="zap" class="w-10 h-10 mb-3"></i>
+                    <p class="text-lg font-medium">JavaScript</p>
+                </div>
+
+                <!-- Tailwind -->
+                <div class="bg-base-200 p-6 rounded-xl shadow-md flex flex-col items-center hover:scale-105 transition"
+                    data-aos="zoom-in" data-aos-delay="300">
+                    <i data-lucide="wind" class="w-10 h-10 mb-3"></i>
+                    <p class="text-lg font-medium">Tailwind CSS</p>
+                </div>
+
+                <!-- DaisyUI -->
+                <div class="bg-base-200 p-6 rounded-xl shadow-md flex flex-col items-center hover:scale-105 transition"
+                    data-aos="zoom-in" data-aos-delay="400">
+                    <i data-lucide="flower" class="w-10 h-10 mb-3"></i>
+                    <p class="text-lg font-medium">DaisyUI</p>
+                </div>
+
+                <!-- Python -->
+                <div class="bg-base-200 p-6 rounded-xl shadow-md flex flex-col items-center hover:scale-105 transition"
+                    data-aos="zoom-in" data-aos-delay="500">
+                    <i data-lucide="cpu" class="w-10 h-10 mb-3"></i>
+                    <p class="text-lg font-medium">Python</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <section id="project" class="py-24 bg-base-100">
+        <div class="max-w-6xl mx-auto px-6">
+
+            <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">
+                Projects
+            </h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- PROJECT 1 -->
+                <div class="bg-base-200 p-5 rounded-xl shadow-md hover:scale-[1.03] transition cursor-pointer"
+                    data-aos="zoom-in">
+                    <img src="Asset/Image/Screenshot 2025-12-01 at 8.17.18 am.png"
+                        class="rounded-lg mb-4 w-full h-40 object-cover" alt="">
+                    <h3 class="text-xl font-semibold">All In One Menu</h3>
+                    <p class="text-sm opacity-70 mt-2">Simple Arithmetics Menu.</p>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <div class="bg-base-200 p-5 rounded-xl shadow-md hover:scale-[1.03] transition cursor-pointer"
+                    data-aos="zoom-in" data-aos-delay="100">
+                    <img src="Asset/Image/Screenshot 2025-12-01 at 8.16.43 am.png"
+                        class="rounded-lg mb-4 w-full h-40 object-cover" alt="">
+                    <h3 class="text-xl font-semibold">E-Commerce</h3>
+                    <p class="text-sm opacity-70 mt-2">Simple Restaurant Cashier.</p>
+                </div>
+
+                <!-- PROJECT 3 -->
+                <div class="bg-base-200 p-5 rounded-xl shadow-md hover:scale-[1.03] transition cursor-pointer"
+                    data-aos="zoom-in" data-aos-delay="200">
+                    <img src="Asset/Image/Screenshot 2025-12-01 at 8.17.42 am.png"
+                        class="rounded-lg mb-4 w-full h-40 object-cover" alt="">
+                    <h3 class="text-xl font-semibold">Learning Page</h3>
+                    <p class="text-sm opacity-70 mt-2">Learning Chapter Website.</p>
+                </div>
+
+                <!-- PROJECT 4 -->
+                <div class="bg-base-200 p-5 rounded-xl shadow-md hover:scale-[1.03] transition cursor-pointer"
+                    data-aos="zoom-in" data-aos-delay="300">
+                    <img src="Asset/Image/Screenshot 2025-12-01 at 8.18.28 am.png"
+                        class="rounded-lg mb-4 w-full h-40 object-cover" alt="">
+                    <h3 class="text-xl font-semibold">Simple Menu</h3>
+                    <p class="text-sm opacity-70 mt-2">Scholarship Eligibility Checker.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section id="contact" class="max-w-3xl mx-auto px-6 py-20">
+        <h2 class="text-3xl font-semibold tracking-tight mb-6">Contact</h2>
+
+
+        <form class="space-y-6 mb-20">
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                <input type="text"
+                    class="w-full border border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black focus:border-black"
+                    placeholder="Your name" />
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                <input type="email"
+                    class="w-full border border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black focus:border-black"
+                    placeholder="you@example.com" />
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                <textarea
+                    class="w-full border border-gray-300 rounded-xl px-4 py-2 h-32 focus:outline-none focus:ring-2 focus:ring-black focus:border-black"
+                    placeholder="Write your message..."></textarea>
+            </div>
+
+            <button type="submit" class="px-6 py-3 bg-black text-white rounded-xl hover:bg-gray-800 transition">
+                Send Message
+            </button>
+        </form>
+    </section>
+    <footer class="w-full bg-base-300 text-base-content py-12 mt-20 transition">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col items-center gap-8">
+
+            <div class="flex gap-8">
+                <a href="https://instagram.com/ghazi.aru" class="hover:text-pink-500 transition">
+                    <i data-lucide="instagram" class="w-7 h-7"></i>
+                </a>
+
+                <a href="https://wa.me/6285802709350" class="hover:text-green-600 transition">
+                    <i data-lucide="message-circle" class="w-7 h-7"></i>
+                </a>
+
+                <a href="mailto:arfaghazi13@gmail.com" class="hover:text-red-600 transition">
+                    <i data-lucide="mail" class="w-7 h-7"></i>
+                </a>
+            </div>
+
+            <p class="text-sm opacity-70 text-center">
+                © 2025 Arfa Ghazi Amr Arumi — All Rights Reserved
+            </p>
+        </div>
+    </footer>
+    <script>
+        lucide.createIcons();
+
+        AOS.init();
+
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.querySelector('html');
+
+        // Load saved theme on refresh
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            html.setAttribute('data-theme', savedTheme);
+            // checked = true when theme is 'dark'
+            themeToggle.checked = savedTheme === 'dark';
+        } else {
+            // jika belum ada saved theme, sinkron dengan atribut html (default)
+            const defaultTheme = html.getAttribute('data-theme') || 'light';
+            themeToggle.checked = defaultTheme === 'dark';
+        }
+
+        themeToggle.addEventListener('change', () => {
+            const theme = themeToggle.checked ? 'dark' : 'light';
+            html.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+        });
+
+        const sections = document.querySelectorAll("section, .hero");
+        const navLinks = document.querySelectorAll("#navbar a");
+
+        window.addEventListener("scroll", () => {
+            let current = "";
+
+            sections.forEach(section => {
+                const top = window.scrollY;
+                const offset = section.offsetTop - 150;
+                const height = section.offsetHeight;
+
+                if (top >= offset && top < offset + height) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove("bg-neutral", "text-white");
+
+                if (link.getAttribute("href") === "#" + current) {
+                    link.classList.add("bg-neutral", "text-white");
+                }
+            });
+        });
+        const roles = [
+            "Web Developer",
+            "Frontend Engineer",
+            "Full-Stack Enthusiast",
+            "UI Craftsman"
+        ];
+
+        let roleIndex = 0;
+        let charIndex = 0;
+        let currentText = "";
+        let isDeleting = false;
+        const speed = 100;
+
+        function type() {
+            const span = document.getElementById("role");
+
+            currentText = roles[roleIndex];
+
+            if (!isDeleting) {
+                span.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+
+                if (charIndex === currentText.length) {
+                    isDeleting = true;
+                    setTimeout(type, 1000);
+                    return;
+                }
+            } else {
+                span.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+
+                if (charIndex === 0) {
+                    isDeleting = false;
+                    roleIndex = (roleIndex + 1) % roles.length;
+                }
+            }
+
+            setTimeout(type, isDeleting ? 50 : speed);
+        }
+
+        type();
+
+    </script>
+</body>
+
+</html>
